@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="m-auto pt-5  ">
+                    <form action="/handleAdd" method="post" enctype="multipart/form-data">
+
+
+                        <label class="mt-4" for="test">Trip Title</label>
+                        <input required class="form-control" name="tripTitle" id="test">
+
+
+                        <label class="mt-4" for="Trip_Type">Trip Type</label>
+                        <select required class="form-control" name="tripType" id="testing">
+                            <optgroup>
+                                <option value="Full Package">Full Package Trip</option>
+                                <option value="One day tour">One day tour</option>
+                                <option value="Top tour">Top tour</option>
+                            </optgroup>
+                        </select>
+
+                        <div class="input-group mt-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input required type="file" name="coverPhoto" class="custom-file-input" id="cover"
+                                    aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="cover">Choose Cover Photo</label>
+                            </div>
+                        </div>
+
+
+
+                        <label class="mt-4" for="Trip_Description">Description</label>
+                        <textarea required class=" form-control" name="Description" id="" cols="30"
+                            rows="10"></textarea>
+
+
+                        <label class="mt-4" for="Trip_Price">Price</label>
+                        <input required class="form-control" name="tripPrice">
+
+
+                        <div class="input-group mt-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input required multiple type="file" name="tripPhotos" class="custom-file-input"
+                                    id="tripPhotos" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="cover">Choose Trip Photos</label>
+                            </div>
+                        </div>
+                        <div class="text-center mt-1">
+                            <span class="text-danger">Choose Only 3 photos!</span>
+                        </div>
+
+
+
+                        <label class="mt-4" for="Trip_Inclusions">Inclusions</label>
+                        <textarea required class=" form-control" name="Inclusions" id="" cols="30" rows="10"></textarea>
+
+
+                        <label class="mt-4" for="Trip_Duration">Duration</label>
+                        <input required class="form-control" name="tripDuration">
+
+
+                        <label class="mt-4" for="Departure details">Departure details</label>
+                        <textarea required class=" form-control" name="departureDetails" id="" cols="30"
+                            rows="10"></textarea>
+
+
+                        <label class="mt-4" for="Exclusions
+                        ">Exclusions
+                        </label>
+                        <textarea required class=" form-control" name="Exclusions" id="" cols="30"
+                            rows="5"></textarea>
+
+
+
+                        <!-- <label class="mt-4" for="">Cancellation policy</label>
+                        <textarea required class=" form-control" name="cancellationPolicy" id="" cols="30"
+                            rows="10"></textarea> -->
+
+
+
+
+                        <button type="submit" class="btn btn-info w-100 my-5">Submit</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

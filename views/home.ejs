@@ -1,0 +1,317 @@
+<%- include('header.ejs') %>
+
+
+
+
+
+    <div class="Whtasapp ">
+        <a href="https://wa.me/+201060697897" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="scrollToTop"><i class="fas fa-chevron-up"></i></div>
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light  py-3">
+            <a class="navbar-brand" href="/">
+                <div class="brand">Thoth Moon</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse links_styles" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/trips">Trips</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reviews">Reviews</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/booking">Booking</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <section class="starter col-md-12">
+                    <div class="content col-md-6">
+                        <p class="subTitle">Best Destinations in Egypt</p>
+                        <h1 class="title">
+                            Travel, <span>enjoy</span> and live a new and full life
+                        </h1>
+                        <div class="description">
+                            “We travel, initially, to lose ourselves; and we travel, next to find ourselves”
+                            Take only memories, leave only footprints 
+                        </div>
+                        <div class="last">
+                            <a href="/trips"> <button>Find out more</button></a>
+
+                        </div>
+                    </div>
+                    <div class="image col-md-6">
+                        <img class="w-100" src="assets/traveller1.png" alt="" />
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <section class="about py-5">
+            <div class="col-md-12 " id="about">
+                <div class="
+              content
+              d-flex
+              justify-content-center
+              align-items-center
+              flex-column text-center
+            ">
+                    <h2 class="title">WHO WE ARE ?</h2>
+                    <p>
+                        We are group of professional Egyptologists
+                        <span style="color: #00c3da"></span> Cairo, <br />
+                         Giza, Alexandria, Siwa, Black & White Desert, Luxor,
+                        Aswan Marsa Alam, Marsa Matrouh, Hurghada, Sharm and Fayoum Oasis.
+                    </p>
+                    <button><a href="#">READ MORE</a></button>
+                </div>
+            </div>
+        </section>
+        <!-- ============ End About Section ================ -->
+        <section class="Travel py-3" id="Travel">
+            <div class="Travel">
+                <div class="container">
+                    <div class="content text-center py-3">
+                        <h2> Our Travels In Egypt</h2>
+                        <br>
+                        <p>Outdoor Activities, Boat Tours & Water Sports, Other, Tours, Transportation, Archaeology
+                            Tours, Day
+                            Trips, Dolphin & Whale Watching, Boat Rentals, Fishing Charters & Tours, Taxis & Shuttles,
+                            Balloon Rides,
+                            Stand-Up Paddleboarding, Self-Guided Tours & Rentals, Private Tours, Swim with Dolphins,
+                            Multi-day Tours
+                        </p>
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="Travel-item">
+                                <div class="Travel-img">
+                                  <a href=" /trip-details/<%= data[0]._id %>"> <img src="<%= data[0].CoverPhoto %> " alt="Image"></a>
+                                </div>
+                                <div class="col-md-12">
+                                    <h3>
+                                        <%= data[0].Title %>
+                                    </h3>
+
+                                    <p class="mb-3">
+                                        <%=data[0].Description %>
+                                    </p>
+                                </div>
+                                <div class=" col-md-12 d-flex ">
+                                    <div class="col-md-6 price ">
+                                        <button class="btn btn-outline-info  rounded ">Start From <%= data[0].Price %>
+                                        </button>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn  rounded learn" href="/trip-details/<%= data[0]._id %>">Learn
+                                            More</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="Travel-item">
+                                <div class="Travel-img">
+                                   <a href="/trip-details/<%= data[1]._id %>"> <img src="<%= data[1].CoverPhoto %> " alt="Image"></a>
+                                </div>
+                                <div class="col-md-12">
+                                    <h3>
+                                        <%= data[1].Title %>
+                                    </h3>
+
+                                    <p class="mb-3">
+                                        <%=data[1].Description %>
+                                    </p>
+                                </div>
+                                <div class=" col-md-12 d-flex ">
+                                    <div class="col-md-6 price ">
+                                        <button class="btn btn-outline-info  rounded ">Start From <%= data[1].Price %>
+                                        </button>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn  rounded learn" href="/trip-details/<%= data[1]._id %>">Learn
+                                            More</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="Travel-item">
+                                <div class="Travel-img">
+                                    <a href="/trip-details/<%= data[2]._id %>"> <img src="<%= data[2].CoverPhoto %> " alt="Image"></a>
+                                </div>
+                                <div class="col-md-12">
+                                    <h3>
+                                        <%= data[2].Title %>
+                                    </h3>
+
+                                    <p class="mb-3">
+                                        <%=data[2].Description %>
+                                    </p>
+                                </div>
+                                <div class=" col-md-12 d-flex ">
+                                    <div class="col-md-6 price ">
+                                        <button class="btn btn-outline-info  rounded ">Start From <%= data[2].Price %>
+                                        </button>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn  rounded learn" href="/trip-details/<%= data[2]._id %>">Learn
+                                            More</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="Travel-item">
+                                <div class="Travel-img">
+                                    <a href="/trip-details/<%= data[3]._id %>"> <img src="<%= data[3].CoverPhoto %> " alt="Image"></a>
+                                </div>
+                                <div class="col-md-12">
+                                    <h3>
+                                        <%= data[3].Title %>
+                                    </h3>
+
+                                    <p class="mb-3">
+                                        <%=data[3].Description %>
+                                    </p>
+                                </div>
+                                <div class=" col-md-12 d-flex ">
+                                    <div class="col-md-6 price ">
+                                        <button class="btn btn-outline-info  rounded ">Start From <%= data[3].Price %>
+                                        </button>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn  rounded learn" href="/trip-details/<%= data[3]._id %>">Learn
+                                            More</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="Travel-item">
+                                <div class="Travel-img">
+                                    <a href="/trip-details/<%= data[4]._id %>"> <img src="<%= data[4].CoverPhoto %> " alt="Image"></a>
+                                </div>
+                                <div class="col-md-12">
+                                    <h3>
+                                        <%= data[4].Title %>
+                                    </h3>
+
+                                    <p class="mb-3">
+                                        <%=data[4].Description %>
+                                    </p>
+                                </div>
+                                <div class=" col-md-12 d-flex ">
+                                    <div class="col-md-6 price ">
+                                        <button class="btn btn-outline-info  rounded ">Start From <%= data[4].Price %>
+                                        </button>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn  rounded learn" href="/trip-details/<%= data[4]._id %>">Learn
+                                            More</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="Travel-item">
+                                <div class="Travel-img">
+                                    <a href="/trip-details/<%= data[4]._id %>"> <img src="<%= data[4].CoverPhoto %> " alt="Image"></a>
+                                </div>
+                                <div class="col-md-12">
+                                    <h3>
+                                        <%= data[4].Title %>
+                                    </h3>
+
+                                    <p class="mb-3">
+                                        <%=data[4].Description %>
+                                    </p>
+                                </div>
+                                <div class=" col-md-12 d-flex ">
+                                    <div class="col-md-6 price ">
+                                        <button class="btn btn-outline-info  rounded ">Start From <%= data[4].Price %>
+                                        </button>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn  rounded learn" href="/trip-details/<%= data[4]._id %>">Learn
+                                            More</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="seeAll text-right font-weight-bold">
+                                <a class="text-decoration-none" href="/trips">See all Trips <i
+                                        class="fas fa-long-arrow-alt-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe">
+            <h2 class="title">
+                Subscribe to get information, latest news and other interesting offers
+                about Travely.
+            </h2>
+            <div class="contact">
+                <input type="text" placeholder="Your email" />
+                <button>Subscribe</button>
+            </div>
+        </section>
+
+
+
+        <%- include('footer.ejs') %>

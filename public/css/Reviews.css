@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.6rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #f07167;
+}
+.Whtasapp {
+  position: fixed;
+  left: 0;
+  top: 20%;
+  padding: 0 10px 0 5px;
+  background-color: rgb(42, 231, 89);
+  border-radius:0 50px 50px 0;
+  font-size: 40px;
+}
+.scrollToTop {
+  display: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 4rem;
+  background-color: #f07167;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.scrollToTop i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90%;
+  font-size: 1.8rem;
+  color: white;
+}
+
+
+
+nav {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .nav-container .brand {
+  color: #1b2f5a;
+  font-size: 3rem;
+  font-family: "Zen Tokyo Zoo", cursive;
+}
+
+nav .nav-container .responsive-toggle {
+  display: none;
+}
+
+nav .links ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .links ul li {
+  margin: 0 3rem;
+}
+
+nav .links ul li a {
+  color: #1b2f5a;
+  font-size: 1.2rem;
+}
+.content h3 {
+  font-family: 'Bebas Neue', cursive;
+}
+.content p {
+color: black;
+font-size:18px
+}

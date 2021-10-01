@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/css/Trips.css" />
+    <link rel="stylesheet" href="css/TripDetails.css">
+    <link rel="stylesheet" href="/css/style.css" />
+
+
+    <title>Trips</title>
+</head>
+
+<body>
+    <!-- ==================Nav================== -->
+    <div class="Whtasapp ">
+        <a href="https://wa.me/+201060697897" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="scrollToTop"><i class="fas fa-chevron-up"></i></div>
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light  py-3">
+            <a class="navbar-brand" href="/">
+                <div class="brand">Thoth Moon</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse links_styles" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/trips">Trips</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reviews">Reviews</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/booking">Booking</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+        <!-- ==================Nav================== -->
+
+
+        <section class="Travel py-3" id="Travel">
+            <div class="Travel">
+                <div class="container">
+                    <div class="content text-center py-3">
+                        <h2> Our Travels In Egypt</h2>
+                        <br>
+                        <p>Outdoor Activities, Boat Tours & Water Sports, Other, Tours, Transportation, Archaeology
+                            Tours, Day
+                            Trips, Dolphin & Whale Watching, Boat Rentals, Fishing Charters & Tours, Taxis & Shuttles,
+                            Balloon Rides,
+                            Stand-Up Paddleboarding, Self-Guided Tours & Rentals, Private Tours, Swim with Dolphins,
+                            Multi-day Tours
+                        </p>
+                    </div>
+                    <div class="Top-trip text-center mt-3">
+                        <h2> Top Tours </h2>
+                        <div class="row mt-4">
+
+
+
+                            <% for( let index=0; index < topTour.length; index++ ) { %>
+
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="Travel-item">
+                                        <div class="Travel-img">
+                                            <img src="<%= topTour[index].CoverPhoto %>" alt="Image">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <h3>
+                                                <%= topTour[index].Title %>
+                                            </h3>
+
+                                            <p class="mb-3">
+                                                <%= topTour[index].Description %>
+                                            </p>
+                                        </div>
+                                        <div class=" col-md-12 d-flex ">
+                                            <div class="col-md-6 price ">
+                                                <button class="btn btn-outline-info  rounded ">Start From <span>
+                                                        <%= topTour[index].Price %>
+                                                    </span>
+                                                </button>
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="btn  rounded learn"
+                                                    href="/trip-details/<%= topTour[index]._id %>">Learn More</a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+
+
+                        </div>
+                    </div>
+                    <div class="oneDay-trip text-center mt-3">
+                        <h2> One Day Tour</h2>
+                        <div class="row mt-4">
+
+
+                            <% for( let index=0; index < oneDayTour.length; index++ ) { %>
+
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="Travel-item">
+                                        <div class="Travel-img">
+                                            <img src="<%= oneDayTour[index].CoverPhoto %> " alt="Image">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <h3>
+                                                <%= oneDayTour[index].Title %>
+                                            </h3>
+
+                                            <p class="mb-3">
+                                                <%= oneDayTour[index].Description %>
+                                            </p>
+                                        </div>
+                                        <div class=" col-md-12 d-flex ">
+                                            <div class="col-md-6 price ">
+                                                <button class="btn btn-outline-info  rounded ">Start From <span>
+                                                        <%= oneDayTour[index].Price %>
+                                                    </span>
+                                                </button>
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="btn  rounded learn"
+                                                    href="/trip-details/<%= oneDayTour[index]._id %>">Learn More</a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+
+
+                        </div>
+                    </div>
+                    
+                    <div class="Full-trip text-center mt-3">
+                        <h2> Full Packdge Trip</h2>
+                        <div class="row mt-4">
+
+
+
+                            <% for( let index=0; index < fullPackageTour.length; index++ ) { %>
+
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="Travel-item">
+                                        <div class="Travel-img">
+                                            <img src="<%= fullPackageTour[index].CoverPhoto %> " alt="Image">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <h3>
+                                                <%= fullPackageTour[index].Title %>
+                                            </h3>
+
+                                            <p class="mb-3">
+                                                <%= fullPackageTour[index].Description %>
+                                            </p>
+                                        </div>
+                                        <div class=" col-md-12 d-flex ">
+                                            <div class="col-md-6 price ">
+                                                <button class="btn btn-outline-info  rounded ">Start From <span>
+                                                        <%= fullPackageTour[index].Price %>
+                                                    </span>
+                                                </button>
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="btn  rounded learn"
+                                                    href="/trip-details/<%= fullPackageTour[index]._id %>">Learn
+                                                    More</a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <%- include('footer.ejs') %>

@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.6rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #f07167;
+}
+.Whtasapp {
+  position: fixed;
+  left: 0;
+  top: 20%;
+  padding: 0 10px 0 5px;
+  background-color: rgb(42, 231, 89);
+  border-radius: 0 50px 50px 0;
+  font-size: 40px;
+}
+.scrollToTop {
+  display: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 4rem;
+  background-color: #f07167;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.scrollToTop i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 90%;
+  font-size: 1.8rem;
+  color: white;
+}
+
+nav {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+nav .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+nav .nav-container .brand {
+  color: #1b2f5a;
+  font-size: 3rem;
+  font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+nav .nav-container .responsive-toggle {
+  display: none;
+}
+
+nav .links ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .links ul li {
+  margin: 0 3rem;
+}
+
+nav .links ul li a {
+  color: #1b2f5a;
+  font-size: 1.2rem;
+}
+/* ============ end Navs ==================== */
+.Travel {
+  position: relative;
+  width: 100%;
+}
+.Travel h2 {
+  color: #1b2f5a;
+  font-size: 3rem;
+  font-family: 'Bebas Neue', cursive;
+}
+.Travel p {
+  color: #787878;
+  font-size: 19px;
+}
+
+.Travel .Travel-item {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(243, 235, 160, 0.04);
+}
+
+.Travel .Travel-img {
+  position: relative;
+  width: 100%;
+}
+
+.Travel .Travel-img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Travel .Travel-img::after {
+  position: absolute;
+  content: '';
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  z-index: 1;
+}
+
+.Travel .Travel-item h3 {
+  margin: 0;
+  padding: 25px 15px 15px 15px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4688ec;
+  height: 75px;
+}
+
+.Travel .Travel-item p {
+  margin: 0;
+  padding: 0 25px 25px 25px;
+  font-size: 14px;
+  color: #787878;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.Travel .Travel-item a.btn {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d2434;
+  border: 2px solid #1d2434;
+  border-radius: 0;
+  background: none;
+  transition: 0.3s;
+}
+
+.Travel .Travel-item .learn:hover {
+  color: #d5b981;
+  background: #1d2434;
+  border-color: #1d2434;
+}
+
+.Travel .price button {
+  padding: 10px 5px;
+  border: 2px solid #1d2434 !important;
+}
