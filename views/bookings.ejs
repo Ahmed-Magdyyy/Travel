@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/css/Booking.css">
+    <link rel="stylesheet" href="/css/style.css" />
+
+
+    <title>Booking</title>
+</head>
+
+<body>
+    <div class="scrollToTop"><i class="fas fa-chevron-up"></i></div>
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light  py-3">
+            <a class="navbar-brand" href="/">
+                <div class="brand">Thoth Moon</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse links_styles" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/trips">Trips</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reviews">Reviews</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/booking">Booking</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- ==================Nav================== -->
+        <div id="booking" class="section ">
+            <div class="section-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="booking-form">
+                            <div class="form-header">
+                                <h1>Make your reservation</h1>
+                            </div>
+
+                            <form action="/handleBookings" method="post">
+                                <div class="form-group" required> <input class="form-control" name="name" type="text"
+                                        placeholder="Your Name" required> <span class="form-label">Your Name</span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group "> <input required class="form-control" name="email"
+                                                type="email" placeholder="Enter your Email"> <span
+                                                class="form-label">Email</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group" required> <input class="form-control" name="phone"
+                                                type="tel" placeholder="Enter your whatsapp number" required> <span
+                                                class="form-label">Phone</span> </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group"> <select class="form-control" name="trip" required>
+                                                <option value="" selected hidden>Choose the Trip</option>
+
+                                                <% for( let index=0; index < data.length; index++ ) { %>
+                                                    <option>
+                                                        <%= data[index].Title %>
+                                                    </option>
+                                                    <% } %>
+
+                                            </select> <span class="select-arrow"></span> <span
+                                                class="form-label">Rooms</span> </div>
+                                    </div>
+
+                                </div>
+
+                                <div class=" row">
+                                    <div class="col-md-6">
+                                        <div class="form-group" required>
+                                            <input class="form-control" name="checkIn" type="date" required>
+                                            <span class="form-label">Check In</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group" required> <input required class="form-control"
+                                                name="checkOut" type="date">
+                                            <span class="form-label">Check out</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group"> <select class="form-control" name="rooms" required>
+                                                <option value="" selected hidden>no of rooms</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select> <span class="select-arrow"></span> <span
+                                                class="form-label">Rooms</span> </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group"> <select class="form-control" name="adults" required>
+                                                <option value="" selected hidden>no of adults</option>
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                            </select> <span class="select-arrow"></span> <span
+                                                class="form-label">Adults</span> </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group"> <select class="form-control" name="children" required>
+                                                <option value="" selected hidden>no of children</option>
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                            </select> <span class="select-arrow"></span> <span
+                                                class="form-label">Children</span> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Your Inquire</label>
+                                            <textarea class="form-control" name="inquire" children
+                                                id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md12">
+                                        <div>
+                                            <p class="text-center text-warning">* After submitting, Contact us on
+                                                WhatsApp
+                                                on <a href="https://wa.me/+201060697897"
+                                                    target="_blank">+201060697897</a>
+                                                to confirm the booking. *
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-btn mt-3">
+                                    <button type="submit" class="submit-btn">Book
+                                        Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('footer.ejs') %>
