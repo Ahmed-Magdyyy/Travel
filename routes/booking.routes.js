@@ -33,7 +33,7 @@ app.post('/handleBooking', async (req, res) => {
     children,
     inquire,
   });
-  res.redirect('/booking');
+  res.redirect('/');
 });
 
 module.exports = app;

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="css/TripDetails.css">
 
@@ -221,11 +221,11 @@
                             <p class="card-text"><span>
                                     <%= details[0].Exclusions %>
                                 </span> </p>
-                            
-                                <h5 class="card-title mt-3">Available languages </h5>
-                                <p class="card-text">
-                                    Arabic, German, English, Italian, French, Spanish
-                                </p>
+
+                            <h5 class="card-title mt-3">Available languages </h5>
+                            <p class="card-text">
+                                Arabic, German, English, Italian, French, Spanish
+                            </p>
                             <h5 class="card-title mt-3 text-danger">Cancellation policy</h5>
                             <p class="card-text">For a full refund, cancel at least 24 hours in advance of the start
                                 date of the
@@ -237,17 +237,17 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                             <h5 class="card-title mt-1">Duration</h5>
+                            <h5 class="card-title mt-1">Duration</h5>
                             <p class="card-text"><span>
                                     <%= details[0].Duration %>
-                                </span> Hour</p>
+                                </span></p>
 
                             <h5 class="card-title mt-3">Price</h5>
                             <p class="card-text"><span>
                                     <%= details[0].Price %>
                                 </span> you will have dicount on groups numbers </p>
 
-                                
+
 
                             <h5 class="card-title mt-3">Departure details</h5>
                             <p class="card-text">
@@ -264,48 +264,49 @@
 
             </div>
 
-<section class="Reviews" id="">
-    <div class="container mt-5">
-        <div class="d-flex justify-content-center row">
-            <div class="col-md-12">
-                <div class="p-3 bg-white rounded">
-                    <h6>What Travelers says about us ?</h6>
+            <section class="Reviews" id="">
+                <div class="container mt-5">
+                    <div class="d-flex justify-content-center row">
+                        <div class="col-md-12">
+                            <div class="p-3 bg-white rounded">
+                                <h6>What Travelers says about us ?</h6>
 
-                    <% for( let index=0; index < reviews.length; index++ ) { %>
+                                <% for( let index=0; index < reviews.length; index++ ) { %>
 
 
-                        <div class="review mt-4">
-                            <div class="d-flex flex-row comment-user"><img class="rounded"
-                                    src="https://carnbrae.com.au/wp-content/uploads/2021/05/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" width="40">
-                                <div class="ml-2">
-                                    <div class="d-flex flex-row align-items-center"><span
-                                            class="name font-weight-bold">
-                                            <%= reviews[index].reviewName %>
-                                        </span><span class="dot"></span><span class="date">
-                                            <%= reviews[index].reviewDate %>
-                                        </span>
+                                    <div class="review mt-4">
+                                        <div class="d-flex flex-row comment-user"><img class="rounded"
+                                                src="https://carnbrae.com.au/wp-content/uploads/2021/05/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+                                                width="40">
+                                            <div class="ml-2">
+                                                <div class="d-flex flex-row align-items-center"><span
+                                                        class="name font-weight-bold">
+                                                        <%= reviews[index].reviewName %>
+                                                    </span><span class="dot"></span><span class="date">
+                                                        <%= reviews[index].reviewDate %>
+                                                    </span>
+                                                </div>
+                                                <div class="rating">
+                                                    <% for( let i=1; i<=reviews[index].rating ; i++ ) { %>
+                                                        <i class="fa fa-star"></i>
+                                                        <% } %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <p class="comment-text">
+                                                <%= reviews[index].reviewText %>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="rating">
-                                        <% for( let i=1; i<=reviews[index].rating ; i++ ) { %>
-                                            <i class="fa fa-star"></i>
-                                            <% } %>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-2">
-                                <p class="comment-text">
-                                    <%= reviews[index].reviewText %>
-                                </p>
+                                    <% } %>
+
                             </div>
                         </div>
-                        <% } %>
-
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-            
+            </section>
+
 
 
 
