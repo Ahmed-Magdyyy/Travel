@@ -27,6 +27,7 @@ app.post('/submitEditTripDetails', async (req, res) => {
     Inclusions,
     tripDuration,
     departureDetails,
+    availableLanguages,
     Exclusions,
   } = req.body;
 
@@ -42,6 +43,7 @@ app.post('/submitEditTripDetails', async (req, res) => {
       Inclusions: Inclusions,
       Duration: tripDuration,
       DepartureDetails: departureDetails,
+      AvailableLanguages: availableLanguages,
       Exclusions,
     }
   );

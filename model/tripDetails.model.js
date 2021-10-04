@@ -10,8 +10,8 @@ const TripDetailsSchema = mongoose.Schema({
   Inclusions: String,
   Duration: String,
   DepartureDetails: String,
+  AvailableLanguages: String,
   Exclusions: String,
-  // CancellationPolicy: String,
 });
 
 module.exports = mongoose.model('TripDetail', TripDetailsSchema);

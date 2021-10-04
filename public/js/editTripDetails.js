@@ -2,6 +2,7 @@ function editTrip(id) {
   let title = document.getElementById('TripTitleEditable').innerText;
   let desc = document.getElementById('TripDescEditable').innerText;
   let inclusion = document.getElementById('TripInclusionEditable').innerText;
+  let languages = document.getElementById('TripLanguagesEditable').innerText;
   let Exclusions = document.getElementById('ExclusionsEditable').innerText;
 
   let type = document.getElementById('TripTypeEditable').innerText;
@@ -18,5 +19,6 @@ function editTrip(id) {
   document.getElementById('TripInclusionInput').value = inclusion;
   document.getElementById('TripDurationInput').value = duration;
   document.getElementById('TripDepartureInput').value = departure;
+  document.getElementById('TriplanguagesInput').value = languages;
   document.getElementById('ExclusionsInput').value = Exclusions;
 }

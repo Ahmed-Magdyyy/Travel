@@ -118,8 +118,8 @@
                                 experience.</p>
 
                             <h5 class="card-title mt-3">Available languages </h5>
-                            <p class="card-text">
-                                Arabic, German, English, Italian, French, Spanish
+                            <p class="card-text" id="TripLanguagesEditable">
+                                <%= details[0].AvailableLanguages %>
                             </p>
 
                         </div>
@@ -153,10 +153,7 @@
                 </div>
             </div>
 
-            <div class="btn col-md-12 text-center">
-                <a class="btn btn-danger" href="/booking">Book Now</a>
 
-            </div>
 
 
 
@@ -241,8 +238,12 @@
                                             <textarea required class=" form-control" name="departureDetails"
                                                 id="TripDepartureInput" cols="30" rows="10"></textarea>
 
-                                            <label class="mt-4" for="ExclusionsInput
-                                        ">Exclusions
+                                            <label class="mt-4" for="Available languages">Available languages
+                                            </label>
+                                            <textarea required class=" form-control" name="availableLanguages"
+                                                id="TriplanguagesInput" cols="30" rows="10"></textarea>
+
+                                            <label class="mt-4" for="ExclusionsInput">Exclusions
                                             </label>
                                             <textarea required class=" form-control" name="Exclusions"
                                                 id="ExclusionsInput" cols="30" rows="10"></textarea>

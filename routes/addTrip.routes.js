@@ -18,8 +18,8 @@ app.post('/handleAdd', async (req, res) => {
     Inclusions,
     tripDuration,
     departureDetails,
+    availableLanguages,
     Exclusions,
-    
   } = req.body;
 
   if (req.files == undefined) {
@@ -38,9 +38,10 @@ app.post('/handleAdd', async (req, res) => {
       Inclusions: Inclusions,
       Duration: tripDuration,
       DepartureDetails: departureDetails,
-      Exclusions:Exclusions
+      AvailableLanguages: availableLanguages,
+      Exclusions: Exclusions,
     });
-    res.redirect('/addTrip');
+    res.redirect('/dashboard-editTrips');
   }
 });
 
