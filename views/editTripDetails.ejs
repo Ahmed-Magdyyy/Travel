@@ -43,11 +43,7 @@
                     <div class=" d-flex justify-content-center align-items-center rounded mt-5">
                         <div class="carousel col-md-8">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                </ol>
+
                                 <div class="carousel-inner">
 
                                     <% if (details[0].TripPhotos[0]==undefined) { %>
@@ -111,16 +107,17 @@
                                 <%= details[0].Exclusions %>
                             </p>
 
+                            <h5 class="card-title mt-3">Available languages </h5>
+                            <p class="card-text" id="TripLanguagesEditable">
+                                <%= details[0].AvailableLanguages %>
+                            </p>
+
                             <h5 class="card-title mt-3">Cancellation policy</h5>
                             <p class="card-text" id="TripCancellationEditable">For a full refund, cancel at least 24
                                 hours in advance of the start
                                 date of the
                                 experience.</p>
 
-                            <h5 class="card-title mt-3">Available languages </h5>
-                            <p class="card-text" id="TripLanguagesEditable">
-                                <%= details[0].AvailableLanguages %>
-                            </p>
 
                         </div>
                     </div>
