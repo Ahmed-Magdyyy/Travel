@@ -123,6 +123,7 @@ nav .links ul li a {
 .Travel .Travel-img {
   position: relative;
   width: 100%;
+  height: 230px;
 }
 
 .Travel .Travel-img img {
